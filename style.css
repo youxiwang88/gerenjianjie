@@ -1,0 +1,214 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f1f1f1;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* 头部 */
+header {
+    background: linear-gradient(135deg, #6a11cb, #20365c);
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-family: 'Playfair Display', serif;
+}
+
+header p {
+    font-size: 1rem;
+}
+
+/* 关于我 */
+#about {
+    background-color: #ffffff;
+    padding: 50px 0px;
+}
+
+#about .about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+#about img {
+    max-width: 60px;
+    border-radius: 60%;
+    transition: transform 0.3s ease;
+}
+
+#about img:hover {
+    transform: scale(1.1);
+}
+
+#about .about-info {
+    flex: 1;
+}
+
+#about h2 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    font-family: 'Playfair Display', serif;
+}
+
+#about p {
+    font-size: 1rem;
+    color: #bd3939;
+    margin-bottom: 5px;
+}
+
+#about ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#about li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #2ae86a;
+}
+
+/* 项目展示 */
+#projects {
+    background-color: #ffffff;
+    padding: 0px 0px;
+}
+
+#projects h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+}
+
+.project-card {
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(66, 235, 136, 0.9);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 10px rgba(225, 121, 81, 0.9);
+}
+
+.project-card h3 {
+    font-size: 1rem;
+    color: #b67070;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #b13e3e;
+    margin-bottom: 10px;
+}
+
+.project-card a {
+    font-size: 1rem;
+    color: #2575fc;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.project-card a:hover {
+    color: #6a11cb;
+}
+
+/* 联系我 */
+#contact {
+    background-color: #ffffff;
+    padding: 5px 0;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    font-family: 'Playfair Display', serif;
+}
+
+#contact ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#contact li {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+#contact a {
+    color: #2575fc;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#contact a:hover {
+    color: #6a11cb;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    #about .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #about img {
+        max-width: 150px;
+    }
+
+    .project-card {
+        padding: 5px;
+    }
+
+    .project-card h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .project-card h3 {
+        font-size: 1.3rem;
+    }
+}
