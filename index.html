@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>职位信息大全</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>职位信息大全</h1>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="搜索职位、公司或地点...">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="filters">
+            <div class="filter-group">
+                <h3>行业筛选</h3>
+                <select id="industry-filter">
+                    <option value="">全部行业</option>
+                    <option value="it">IT/互联网</option>
+                    <option value="finance">金融</option>
+                    <option value="education">教育</option>
+                    <option value="medical">医疗</option>
+                    <option value="service">服务业</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <h3>薪资范围</h3>
+                <select id="salary-filter">
+                    <option value="">不限</option>
+                    <option value="0-5000">5000以下</option>
+                    <option value="5000-10000">5000-10000</option>
+                    <option value="10000-15000">10000-15000</option>
+                    <option value="15000-20000">15000-20000</option>
+                    <option value="20000+">20000以上</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <h3>工作经验</h3>
+                <select id="experience-filter">
+                    <option value="">不限</option>
+                    <option value="应届生">应届生</option>
+                    <option value="1-3年">1-3年</option>
+                    <option value="3-5年">3-5年</option>
+                    <option value="5-10年">5-10年</option>
+                    <option value="10年以上">10年以上</option>
+                </select>
+            </div>
+            <button id="filter-btn">筛选</button>
+        </div>
+
+        <div class="job-list-container">
+            <h2>热门职位</h2>
+            <div id="job-list" class="job-list">
+                <!-- 职位列表将通过JavaScript动态生成 -->
+            </div>
+            <div class="pagination">
+                <button id="prev-page" disabled>上一页</button>
+                <span id="current-page">1</span>
+                <button id="next-page">下一页</button>
+            </div>
+        </div>
+    </main>
+
+    <div id="job-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="job-details">
+                <!-- 职位详情将通过JavaScript动态生成 -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 职位信息大全. 保留所有权利.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
