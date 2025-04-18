@@ -154,7 +154,8 @@ select {
     margin-bottom: 10px;
 }
 
-.job-location, .job-experience {
+.job-location,
+.job-experience {
     color: #7f8c8d;
     font-size: 14px;
     margin-bottom: 5px;
@@ -338,18 +339,39 @@ footer {
     main {
         flex-direction: column;
     }
-    
+
     .filters {
         flex: none;
         width: 100%;
     }
-    
+
     .job-list {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
     }
-    
+
     .modal-content {
         margin: 10% 5%;
         padding: 20px;
+    }
+}
+
+/* 添加更小屏幕的媒体查询 */
+@media (max-width: 480px) {
+    .job-list {
+        grid-template-columns: 1fr;
+    }
+
+    .job-card {
+        padding: 15px;
+    }
+
+    .job-title {
+        font-size: 16px;
+    }
+
+    .job-tag {
+        font-size: 10px;
+        padding: 3px 6px;
     }
 }
